@@ -8,6 +8,10 @@ export const InputContainer = styled.div`
   border-radius: 5px;
   font-size: 0.875rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+
+  @media (min-width: 75em) {
+    width: 30rem;
+  }
 `;
 export const Input = styled.input`
   border: none;
