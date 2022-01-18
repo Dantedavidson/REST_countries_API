@@ -1,5 +1,10 @@
-import React from 'react';
-
+import React from "react";
+import * as S from "./Home.styles";
+import Input from "../Input/Input";
 export default function Home() {
-  return <div></div>;
+  return (
+    <S.SearchBar>
+      <Input />
+    </S.SearchBar>
+  );
 }
