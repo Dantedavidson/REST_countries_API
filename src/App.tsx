@@ -1,28 +1,29 @@
-import React, { useState, createContext } from "react";
-import { ThemeProvider } from "styled-components";
-import GlobalStyles from "./styles/GlobalStyles";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import themes from "./styles/theme.schema.json";
-import Layout from "./components/Layout/Layout";
-import Home from "./components/Home/Home";
+import React, { useState, createContext } from 'react';
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from './styles/GlobalStyles';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import themes from './styles/theme.schema.json';
+import Layout from './components/Layout/Layout';
+import Home from './components/HomePage/Home';
+import CountryPage from './components/CountryPage/CountryPage';
 
 type PropsTheme = {
-  theme: "light" | "dark";
+  theme: 'light' | 'dark';
   toggleTheme: (theme: string) => void;
 };
 
 export const ThemeContext = createContext<PropsTheme>({
-  theme: "light",
+  theme: 'light',
   toggleTheme: () => {},
 });
 
 function App() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   const themeContext: PropsTheme = {
     theme,
-    toggleTheme: (theme) => {
-      theme === "light" ? setTheme("dark") : setTheme("light");
+    toggleTheme: theme => {
+      theme === 'light' ? setTheme('dark') : setTheme('light');
     },
   };
   return (
@@ -33,8 +34,8 @@ function App() {
         <Router>
           <Layout>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route />
+              <Route path='/' element={<Home />} />
+              <Route path='/country/:name' element={<CountryPage />} />
             </Routes>
           </Layout>
         </Router>
