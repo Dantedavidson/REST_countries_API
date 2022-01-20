@@ -5,5 +5,5 @@ type Props = {
   handler: () => void;
 };
 export default function Button({ handler, children }: Props) {
-  return <S.Button>{children}</S.Button>;
+  return <S.Button onClick={handler}>{children}</S.Button>;
 }

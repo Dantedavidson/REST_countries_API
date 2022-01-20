@@ -14,7 +14,9 @@ export const fetchSingle = async (name: string | undefined) => {
     const response = await axios.get(
       `https://restcountries.com/v3.1/name/${name}`
     );
-    return response.data[0];
+    let country = response.data.find((item: any) => item.name.common === name);
+    console.log(country);
+    return country;
   } catch (error) {
     return null;
   }

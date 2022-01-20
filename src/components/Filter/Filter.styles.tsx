@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const FilterContainer = styled.div``;
 
@@ -6,7 +6,7 @@ export const Label = styled.label``;
 
 export const Select = styled.select`
   color: lightgrey;
-  background-color: ${(props) => props.theme.colors.elements};
+  background-color: ${props => props.theme.colors.elements};
   padding: 1.375rem 1.875rem;
   border-radius: 0.5rem;
   border: none;
@@ -15,6 +15,7 @@ export const Select = styled.select`
   &:focus {
     outline-width: 0;
   }
+  cursor: pointer;
 `;
 
 export const Option = styled.option`

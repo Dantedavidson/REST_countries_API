@@ -8,4 +8,9 @@ export const Button = styled.div`
   background-color: ${props => props.theme.colors.elements};
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   cursor: pointer;
+
+  @media (min-width: 50em) {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.5rem;
+  }
 `;

@@ -6,7 +6,10 @@ type Props = {
 };
 export default function CountryCard({ country }: Props) {
   return (
-    <Link to={`/country/${country.name.official}`}>
+    <Link
+      to={`/country/${country.name.common}`}
+      style={{ textDecoration: 'none', color: 'inherit' }}
+    >
       <S.Container>
         <S.Flag src={country.flags.png} />
         <S.TextWrapper>

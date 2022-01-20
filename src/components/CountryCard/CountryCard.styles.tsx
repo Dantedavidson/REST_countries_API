@@ -7,7 +7,7 @@ export const Container = styled.div`
   overflow: hidden;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   cursor: pointer;
-  transition: all ease 0.2s;
+  transition: transform ease 0.2s;
   &:hover {
     transform: scale(1.01);
   }
